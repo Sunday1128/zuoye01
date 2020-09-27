@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form>
+    请输入姓名：<input type="text" name="fname"></br>
+    请输入密码：<input type="password" name="lname"></br>
+    请再次输入密码：<input type="password" name="lname"></br>
+
+    性别：<input type="radio" name="sex" value="male">男
+    <input type="radio" name="sex" value="famale">女</br>
+
+    兴趣爱好<input type="checkbox" name="vehicle" value="swim">游泳
+    <input type="checkbox" name="vehicle" value="read book">看书
+    <input type="checkbox" name="vehicle" value="climb">爬山
+    <input type="checkbox" name="vehicle" value="think">思考</br>
+
+    生日<script language="javascript">
+
+    today=new Date();
+
+    now_year=today.getFullYear();
+
+    document.write("<select name='nian'>")
+
+    for(var year=now_year;year>=1900;year--){
+
+        document.write("<option>"+year+"</option>")
+
+    }
+
+    document.write("</select>年")
+
+    document.write("<select name='yue'>")
+
+    for(var month=1;month<=12;month++){
+
+        document.write("<option>"+month+"</option>")
+
+    }
+
+    document.write("</select>月")
+
+    document.write("<select name='ri'>")
+
+    for(var day=1;day<=31;day++){
+
+        document.write("<option>"+day+"</option>")
+
+    }
+
+    document.write("</select>日")
+
+</script></br>
+    头像：<img id="img1" src="img/img1.jpg" style="width: 30px" class="img-thumbnail">
+    <select name="img" id="img" onchange="changeImg()">
+        <option value="img1.jpg">1</option>
+        <option value="img2.jpg">2</option>
+        <option value="img3.jpg">3</option>
+        </select>
+    </br>
+    <input type="button" value="普通按键">
+    <input type="submit" value="提交按键"></br>
+    <td>
+        <br><textarea rows="8" cols="60">请在这里输入...</textarea><br>
+    </td>
+    <input type="button" value="选择文件">
+    <input type="submit" value="上传">
+</form>
+</body>
+</html>
